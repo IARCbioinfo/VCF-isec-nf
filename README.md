@@ -1,5 +1,4 @@
-# Name
-## Empty template for nextflow pipelines (short description)
+# Nextflow VCF Intersection Pipeline
 
 [![CircleCI](https://circleci.com/gh/IARCbioinfo/template-nf.svg?style=svg)](https://circleci.com/gh/IARCbioinfo/template-nf)
 [![Docker Hub](https://img.shields.io/badge/docker-ready-blue.svg)](https://hub.docker.com/r/iarcbioinfo/template-nf/)
@@ -9,76 +8,51 @@
 ![Workflow representation](template-nf.png)
 
 ## Description
-...
+This Nextflow pipeline performs the intersection of VCF files using bcftools. It takes genomic VCF files (for example from Mutect and Strelka), extracts SNVs from Mutect, intersects Mutect and Strelka for indels and multinucleotide polymorphisms (MNPs), and creates a concatenated, indexed VCF file containing Mutect SNPs and intersected indels/MNPs.
 
 ## Dependencies
 
-1. This pipeline is based on [nextflow](https://www.nextflow.io). As we have several nextflow pipelines, we have centralized the common information in the [IARC-nf](https://github.com/IARCbioinfo/IARC-nf) repository. Please read it carefully as it contains essential information for the installation, basic usage and configuration of nextflow and our pipelines.
+1. This pipeline is based on [Nextflow](https://www.nextflow.io). Please refer to the [IARC-nf](https://github.com/IARCbioinfo/IARC-nf) repository for installation, basic usage, and configuration information for Nextflow and our pipelines.
 2. External software:
-- ...
-- ...
+   - bcftools
+   - tabix
 
 You can avoid installing all the external software by only installing Docker. See the [IARC-nf](https://github.com/IARCbioinfo/IARC-nf) repository for more information.
 
-
 ## Input
-  | Type      | Description     |
-  |-----------|---------------|
-  | input1    | ...... |
-  | input2    | ...... |
+| Type      | Description     |
+|-----------|-----------------|
+| VCF Folder (Mutect)    | Path to the folder containing Mutect VCF files |
+| VCF Folder (Strelka)    | Path to the folder containing Strelka VCF files |
 
-  Specify the test files location
+Specify the location of the input VCF files from Mutect and Strelka.
 
 ## Parameters
 
-  * #### Mandatory
+* #### Mandatory
 | Name      | Example value | Description     |
 |-----------|---------------|-----------------|
-| --param1    |            xx | ...... |
-| --param2    |            xx | ...... |
+| --vcfFolderMutect    |     /path/to/mutect/vcf/files        | Path to the folder containing Mutect VCF files |
+| --vcfFolderStrelka    |     /path/to/strelka/vcf/files        | Path to the folder containing Strelka VCF files |
+| --outputFolder    |     /path/to/output/folder        | Path to the output folder |
 
-  * #### Optional
+* #### Optional
 | Name      | Default value | Description     |
 |-----------|---------------|-----------------|
-| --param3   |            xx | ...... |
-| --param4    |            xx | ...... |
+| --vcfSuffixMutect   | _filtered_PASS_norm.vcf.hg38_multianno.vcf.gz | Suffix of Mutect VCF files |
+| --vcfSuffixStrelka    | somatic.snvs_norm.vcf.hg38_multianno.vcf.gz | Suffix of Strelka VCF files |
 
-  * #### Flags
+* #### Flags
 
-Flags are special parameters without value.
+Flags are special parameters without a value.
 
 | Name      | Description     |
 |-----------|-----------------|
 | --help    | Display help |
-| --flag2    |      .... |
-
 
 ## Usage
-  ```
-  ...
-  ```
+```bash
+nextflow run vcf-intersection.nf --vcfFolderMutect /path/to/mutect/vcf/files --vcfFolderStrelka /path/to/strelka/vcf/files --outputFolder /path/to/output/folder
+```
 
-## Output
-  | Type      | Description     |
-  |-----------|---------------|
-  | output1    | ...... |
-  | output2    | ...... |
-
-
-## Detailed description (optional section)
-...
-
-## Directed Acyclic Graph
-[![DAG](dag.png)](http://htmlpreview.github.io/?https://github.com/IARCbioinfo/template-nf/blob/master/dag.html)
-
-## Contributions
-
-  | Name      | Email | Description     |
-  |-----------|---------------|-----------------|
-  | contrib1*    |            xx | Developer to contact for support (link to specific gitter chatroom) |
-  | contrib2    |            xx | Developer |
-  | contrib3    |            xx | Tester |
-
-## References (optional)
-
-## FAQ (optional)
+##
