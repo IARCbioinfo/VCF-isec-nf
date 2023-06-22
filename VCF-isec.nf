@@ -1,4 +1,5 @@
 #! /usr/bin/env nextflow
+nextflow.enable.dsl = 2
 
 // Copyright (C) 2023 IARC/WHO
 
@@ -36,8 +37,8 @@ if (params.help) {
     log.info "nextflow run pipeline.nf [-with-docker] [OPTIONS]"
     log.info ""
     log.info "Mandatory arguments:"
-    log.info "--vcfFolderMutect   <DIR>   Folder containing Mutect VCF files"
-    log.info "--vcfFolderStrelka  <DIR>   Folder containing Strelka VCF files"
+    log.info "--vcfFolder1   <DIR>   Folder containing VCF1 VCF files"
+    log.info "--vcfFolder2  <DIR>   Folder containing VCF2 VCF files"
     log.info "--outputFolder      <DIR>   Output folder"
     log.info ""
     log.info "Optional arguments:"
@@ -48,87 +49,105 @@ if (params.help) {
 } else {
     /* Software information */
     log.info "help:               ${params.help}"
-    log.info "vcfFolderMutect:    ${params.vcfFolderMutect}"
-    log.info "vcfFolderStrelka:   ${params.vcfFolderStrelka}"
+    log.info "vcfFolder1:    ${params.vcfFolder1}"
+    log.info "vcfFolder2:   ${params.vcfFolder2}"
     log.info "outputFolder:       ${params.outputFolder}"
 }
 
-// Define the pipeline name and description
-manifest {
-  name = 'vcf-intersection-pipeline'
-  description = 'Nextflow pipeline for intersecting VCF files using bcftools'
-}
 
 // Define the pipeline parameters
-params {
-  // Input folders
-  vcfFolderMutect = '/path/to/mutect/vcf/files'
-  vcfFolderStrelka = '/path/to/strelka/vcf/files'
+params.vcfFolder1 = '/path/to/VCF1/vcf/files'
+params.vcfFolder2 = '/path/to/VCF2/vcf/files'
 
-  // Output folder
-  outputFolder = '/path/to/output/folder'
+// Output folder
+params.outputFolder = 'output/'
 
-  // File suffixes
-  vcfSuffixMutect = '_filtered_PASS_norm.vcf.hg38_multianno.vcf.gz'
-  vcfSuffixStrelka = 'somatic.snvs_norm.vcf.hg38_multianno.vcf.gz'
-}
+// File suffixes
+params.vcfSuffix1 = '_filtered_PASS_norm.vcf.hg38_multianno.vcf'
+params.vcfSuffix2 = '.somatic.indels_norm.vcf.hg38_multianno.vcf'
+params.ext = '.gz'
 
-// Separate channels for Mutect and Strelka files
-mutectFiles = Channel
-  .fromPath("$params.vcfFolderMutect/*$params.vcfSuffixMutect")
-  .map { file -> file.baseName =~ /S(\d+)_/; [sampleId: $1, file: file] }
+params.mem = 8
 
-strelkaFiles = Channel
-  .fromPath("$params.vcfFolderStrelka/*$params.vcfSuffixStrelka")
-  .map { file -> file.baseName =~ /S(\d+)\./; [sampleId: $1, file: file] }
+    // Separate channels for VCF1 and VCF2 files
+VCF1Files = Channel
+  .fromPath("$params.vcfFolder1/*$params.vcfSuffix1$params.ext")
+  .map { file ->  [file.baseName.replaceAll(params.vcfSuffix1, ""), file,file+".tbi"]}
 
-// Join Mutect and Strelka channels using sample ID as key
-intersectChannel = mutectFiles
-  .keyBy { it.sampleId }
-  .join(strelkaFiles.keyBy { it.sampleId })
+VCF2Files = Channel
+  .fromPath("$params.vcfFolder2/*$params.vcfSuffix2$params.ext")
+  .map { file ->  [file.baseName.replaceAll(params.vcfSuffix2, ""), file,file+".tbi"]}
+
+
+  // Join VCF1 and VCF2 channels using sample ID as key
+intersectChannel = VCF1Files
+  .join(VCF2Files).view()
 
 process extractSNVs {
   input:
-  tuple val(sampleId), file(mutectFile), file(strelkaFile) from intersectChannel
+  tuple val(sampleId), path(VCF1File), path(VCF1Filetbi), path(VCF2File), path(VCF2Filetbi)
 
   output:
-  file("snvs_${sampleId}.vcf.gz") into snvFiles
+  tuple val(sampleId), path("snvs_${sampleId}.vcf.gz")
 
   script:
   """
-  # Extract SNVs from Mutect VCF
-  bcftools view -f 'TYPE="snp"' $mutectFile -Oz -o snvs_${sampleId}.vcf.gz
+  # Extract SNVs from VCF1 VCF
+  bcftools view -v snps $VCF1File -Oz -o snvs_${sampleId}.vcf.gz
   """
 }
 
 process intersectIndelsMNPs {
   input:
-  tuple val(sampleId), file(mutectFile), file(strelkaFile) from intersectChannel
+  tuple val(sampleId), path(VCF1File), path(VCF1Filetbi), path(VCF2File), path(VCF2Filetbi)
 
   output:
-  file("indels_mnps_${sampleId}.vcf.gz") into indelMnpFiles
+  tuple val(sampleId), path("indels_mnps_${sampleId}.vcf.gz") 
 
   script:
   """
-  # Intersect Mutect and Strelka VCF files for indels and MNPs
-  bcftools isec -Oz -n =2 $mutectFile $strelkaFile -p intersect_${sampleId}
-  mv intersect_${sampleId}/0002.vcf.gz indels_mnps_${sampleId}.vcf.gz
-  rm -r intersect_${sampleId}
+  # Intersect VCF1 and VCF2 VCF files for indels and MNPs
+  bcftools isec -Oz -n =2 $VCF1File $VCF2File -p intersect_${sampleId}
+  mv intersect_${sampleId}/0000.vcf.gz indels_mnps_${sampleId}.vcf.gz
   """
 }
 
+
 process concatAndIndexVCF {
+  memory params.mem+'GB'
+
   input:
-  file snvFile from snvFiles
-  file indelMnpFile from indelMnpFiles
+  tuple val(sampleId), path(SNVs), path(indels_MNPs) 
 
   output:
-  file("${params.outputFolder}/concatenated.vcf.gz") into finalVCF
+  path("${sampleId}.snvs_plus_shared_indels.vcf.hg38_multianno.vcf.gz*") 
+
+  publishDir "${params.outputFolder}", mode: 'move'
 
   script:
   """
+  # Index input files
+  bcftools index -t $SNVs
+  bcftools index -t $indels_MNPs
+
   # Concatenate SNV and indels/MNPs files
-  bcftools concat $snvFile $indelMnpFile -Oz -o ${params.outputFolder}/concatenated.vcf.gz
+  mkdir sort_tmp
+  bcftools concat $SNVs $indels_MNPs -a -Ou | bcftools sort -m ${params.mem}G -T sort_tmp/ -Oz -o ${sampleId}.snvs_plus_shared_indels.vcf.hg38_multianno.vcf.gz
 
   # Index the concatenated VCF file
-  tabix -p vcf ${
+  bcftools index -t ${sampleId}.snvs_plus_shared_indels.vcf.hg38_multianno.vcf.gz
+  """
+}
+
+workflow {
+  // Run the processes in parallel
+  extractSNVs(intersectChannel)
+  intersectIndelsMNPs(intersectChannel)
+
+  // Join outputs
+  intersectChannel2 = extractSNVs.out
+                                 .join(intersectIndelsMNPs.out)
+
+  // Run the final process after the previous ones complete
+  concatAndIndexVCF(intersectChannel2)
+}

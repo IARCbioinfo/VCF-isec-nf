@@ -1,6 +1,6 @@
-name: template-nf
+name: vcf-intersection-nf
 channels:
-  - conda-forge
   - bioconda
+  - conda-forge
 dependencies:
-  - samtools=1.8
+  - bcftools=1.10.2
