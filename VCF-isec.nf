@@ -137,6 +137,10 @@ process intersectIndelsMNPs {
   bcftools view -v indels,mnps $VCF1File -Oz -o ${sampleId}_1.indels_mnps.vcf.gz
   bcftools view -v indels,mnps $VCF2File -Oz -o ${sampleId}_2.indels_mnps.vcf.gz
 
+  # Index
+  bcftools index -t ${sampleId}_1.indels_mnps.vcf.gz
+  bcftools index -t ${sampleId}_2.indels_mnps.vcf.gz
+
   # Intersect VCF1 and VCF2 VCF files for indels and MNPs
   bcftools isec -Oz -n =2 ${sampleId}_1.indels_mnps.vcf.gz ${sampleId}_2.indels_mnps.vcf.gz -p intersect_${sampleId}
   mv intersect_${sampleId}/0000.vcf.gz indels_mnps_${sampleId}.vcf.gz
@@ -192,7 +196,6 @@ if(params.vcfSuffix1_snvs != params.vcfSuffix1_indels ){
 }else{
   VCF1Files = VCF1Files_snvs
 }
-//VCF1Files = VCF1Files.view()
 
 // same for second set of VCFs
 VCF2Files_snvs = Channel
@@ -206,7 +209,7 @@ if(params.vcfSuffix2_snvs != params.vcfSuffix2_indels ){
   .fromPath("$params.input_folder2/*$params.vcfSuffix2_indels$params.ext")
   .map { file ->  [file.baseName.replaceAll(params.vcfSuffix2_indels, ""), file,file+".tbi"]}
   // Channel with both files
-  VCF2Files2concat = VCF2Files_snvs.join(VCF2Files_indels).view()
+  VCF2Files2concat = VCF2Files_snvs.join(VCF2Files_indels)
   // Channel with concatenated files
   VCF2Files = concatsnvsindels(VCF2Files2concat)
 }else{
@@ -216,7 +219,7 @@ VCF2Files = VCF2Files
 
   // Join VCF1 and VCF2 channels using sample ID as key
 intersectChannel = VCF1Files
-  .join(VCF2Files).view()
+  .join(VCF2Files)
 
   // Run the processes in parallel
   extractSNVs(intersectChannel)
