@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1573.111"
+   height="953.54291"
+   viewBox="0 0 1258.4887 762.83427"
+   version="1.1"
+   id="svg2"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="VCF-isec-nf.svg"
+   inkscape:export-filename="VCF-isec-nf.png"
+   inkscape:export-xdpi="200"
+   inkscape:export-ydpi="200"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2560"
+     inkscape:window-height="1371"
+     id="namedview132"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.62154919"
+     inkscape:cx="1197.8135"
+     inkscape:cy="436.00733"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid11293"
+       originx="-187.34172"
+       originy="-399.91441" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata134">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs4">
+    <clipPath
+       id="clip1-94">
+      <path
+         id="path9686"
+         d="M 59.039062,59.039062 H 726.75781 V 575.55859 H 59.039062 Z m 0,0"
+         inkscape:connector-curvature="0" />
+    </clipPath>
+    <clipPath
+       id="clip1-94-7">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 59.039062,59.039062 H 726.75781 V 575.55859 H 59.039062 Z m 0,0"
+         id="path9686-13" />
+    </clipPath>
+    <clipPath
+       id="clip1-94-4">
+      <path
+         inkscape:connector-curvature="0"
+         d="M 59.039062,59.039062 H 726.75781 V 575.55859 H 59.039062 Z m 0,0"
+         id="path9686-6" />
+    </clipPath>
+  </defs>
+  <rect
+     style="fill:#d4d4d4;fill-opacity:1;stroke:none;stroke-width:6.34496;stroke-miterlimit:4;stroke-dasharray:19.0348, 19.0348;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect26172"
+     width="531.06927"
+     height="336.45264"
+     x="727.41943"
+     y="97.609566"
+     ry="28.097803" />
+  <path
+     style="fill:none;stroke:#0b0b0b;stroke-width:8.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 1039.969,76.114724 0.4803,395.267216 -367.75981,5.63362 0.24016,133.63361"
+     id="path26832"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccc" />
+  <rect
+     style="fill:#d4d4d4;fill-opacity:1;stroke:none;stroke-width:6.34496;stroke-miterlimit:4;stroke-dasharray:19.0348, 19.0348;stroke-dashoffset:0;stroke-opacity:1"
+     id="rect4823-8-7-8"
+     width="531.06927"
+     height="336.45264"
+     x="57.019379"
+     y="97.609566"
+     ry="28.097803" />
+  <path
+     style="fill:none;stroke:#0b0b0b;stroke-width:8.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 239.56727,76.114724 -0.48031,395.267216 367.75982,5.63362 -0.24016,133.63361"
+     id="path8149"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccc" />
+  <g
+     id="surface0-8"
+     transform="translate(-1426.3552,363.11273)">
+    <g
+       id="g9694"
+       clip-path="url(#clip1-94)"
+       style="clip-rule:nonzero" />
+  </g>
+  <g
+     id="surface0-8-1"
+     transform="translate(-208.73269,952.31915)">
+    <g
+       id="g9694-0"
+       clip-path="url(#clip1-94-7)"
+       style="clip-rule:nonzero" />
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="709.80103"
+     y="558.11542"
+     id="text3757-3-7"><tspan
+       sodipodi:role="line"
+       x="709.80103"
+       y="558.11542"
+       id="tspan3815"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L'"> </tspan></text>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';letter-spacing:0px;word-spacing:0px;fill:#d4d4d4;fill-opacity:1;stroke:none"
+     x="-402.46396"
+     y="33.345001"
+     id="text3592-6-9-9-7"
+     transform="rotate(-90)"><tspan
+       sodipodi:role="line"
+       x="-402.46396"
+       y="33.345001"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';fill:#d4d4d4;fill-opacity:1"
+       id="tspan9612-4">process SNVs</tspan></text>
+  <g
+     id="g13272"
+     transform="matrix(0.77714259,0,0,0.77714259,107.9376,49.515294)" />
+  <path
+     style="fill:none;stroke:#646464;stroke-width:8.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:17.6, 8.8;stroke-dashoffset:0;stroke-opacity:1"
+     d="M 372.36727,76.114724 371.88696,280.59891 H 291.64682 L 291.40666,385.0492"
+     id="path25468"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccc" />
+  <g
+     id="g13686"
+     transform="matrix(0.77714259,0,0,0.77714259,-1524.6427,4.6193653)">
+    <rect
+       transform="rotate(90)"
+       ry="32.055874"
+       y="-2475.5142"
+       x="391.98059"
+       height="412.76517"
+       width="135.14844"
+       id="rect3166-59-0-7-7"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.2353;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="2259.5579"
+       y="432.01733"
+       id="text3757-3-0"><tspan
+         sodipodi:role="line"
+         x="2259.5579"
+         y="432.01733"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L Bold';text-align:center;text-anchor:middle"
+         id="tspan4751-9">extractSNVs</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       x="2269.9448"
+       y="484.79654"
+       id="text3757-3-3-1"><tspan
+         sodipodi:role="line"
+         x="2269.9448"
+         y="484.79654"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';text-align:center;text-anchor:middle"
+         id="tspan4922-8-4"> bcftools view -v snps</tspan><tspan
+         sodipodi:role="line"
+         x="2274.3928"
+         y="524.79651"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';text-align:center;text-anchor:middle"
+         id="tspan4751-1-8"> </tspan></text>
+  </g>
+  <g
+     transform="matrix(0.69730555,0,0,0.77957917,-591.57574,-685.76524)"
+     id="g12681-9">
+    <g
+       id="g12729"
+       transform="translate(-713.6,665.6)">
+      <g
+         id="g24833">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#646464;stroke-width:8.32829;stroke-miterlimit:4;stroke-dasharray:16.6565, 8.32829;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect3166-59-0-7-7-8"
+           width="135.00516"
+           height="425.54666"
+           x="392.05261"
+           y="-2375.2268"
+           ry="20.168512"
+           transform="rotate(90)" />
+        <text
+           id="text3757-3-0-0"
+           y="432.01733"
+           x="2174.2488"
+           style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#3c3c3c;fill-opacity:1;stroke:none"
+           xml:space="preserve"><tspan
+             id="tspan4751-9-5"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';text-align:center;text-anchor:middle;fill:#646464;fill-opacity:1"
+             y="432.01733"
+             x="2174.2488"
+             sodipodi:role="line">concatsnvsindels</tspan></text>
+        <text
+           id="text3757-3-3-1-2"
+           y="470.38467"
+           x="2065.7327"
+           style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#3c3c3c;fill-opacity:1;stroke:none"
+           xml:space="preserve"><tspan
+             id="tspan12391-5-6-0"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';text-align:center;text-anchor:middle;fill:#646464;fill-opacity:1"
+             y="470.38467"
+             x="2065.7327"
+             sodipodi:role="line">concat</tspan><tspan
+             id="tspan4922-8-4-2"
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Italic';text-align:center;text-anchor:middle;fill:#646464;fill-opacity:1"
+             y="510.38467"
+             x="2065.7327"
+             sodipodi:role="line">bcftools concat</tspan><tspan
+             id="tspan4751-1-8-4"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';text-align:center;text-anchor:middle;fill:#646464;fill-opacity:1"
+             y="550.38464"
+             x="2069.0605"
+             sodipodi:role="line"> </tspan></text>
+        <text
+           id="text24771"
+           y="470.38467"
+           x="2274.5334"
+           style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#3c3c3c;fill-opacity:1;stroke:none"
+           xml:space="preserve"><tspan
+             id="tspan24767"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';text-align:center;text-anchor:middle;fill:#646464;fill-opacity:1"
+             y="470.38467"
+             x="2274.5334"
+             sodipodi:role="line">index</tspan><tspan
+             id="tspan24769"
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Italic';text-align:center;text-anchor:middle;fill:#646464;fill-opacity:1"
+             y="510.38467"
+             x="2274.5334"
+             sodipodi:role="line">bcftools index</tspan></text>
+      </g>
+    </g>
+  </g>
+  <g
+     id="g13103"
+     transform="matrix(0.37724833,0,0,0.74035026,-451.01869,374.3902)">
+    <g
+       id="g13053-8"
+       transform="translate(-8.0527936e-5,216.42602)">
+      <rect
+         transform="rotate(90)"
+         ry="26.842791"
+         y="-2478.7539"
+         x="150.90192"
+         height="465.89478"
+         width="113.69476"
+         id="rect21443"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:8.95589;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:8.95589;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect21445"
+         width="109.3091"
+         height="457.12332"
+         x="155.28758"
+         y="-2469.9827"
+         ry="26.842791"
+         transform="rotate(90)" />
+    </g>
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     x="643.00684"
+     y="722.4823"
+     id="text3757-3-4-3"><tspan
+       sodipodi:role="line"
+       x="643.00684"
+       y="722.4823"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:122%;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';text-align:center;text-anchor:middle"
+       id="tspan4751-8-7">Output </tspan><tspan
+       sodipodi:role="line"
+       x="643.00684"
+       y="762.2583"
+       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:122%;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L';text-align:center;text-anchor:middle"
+       id="tspan12548-3">VCF</tspan></text>
+  <g
+     id="surface0-8-4"
+     transform="translate(824.88894,256.82612)">
+    <g
+       id="g9694-09"
+       clip-path="url(#clip1-94-4)"
+       style="clip-rule:nonzero" />
+  </g>
+  <g
+     id="g5445"
+     transform="matrix(0.54086744,0,0,0.54086744,-154.92614,-35.94855)">
+    <g
+       id="g5474">
+      <g
+         id="g5485"
+         transform="translate(53.020455,149.42128)">
+        <g
+           id="g11320"
+           transform="translate(0,-310.61208)">
+          <rect
+             ry="6.0181794"
+             y="1315.7415"
+             x="390.87534"
+             height="298.57138"
+             width="412.07401"
+             id="rect5453"
+             style="fill:#787878;fill-opacity:1;stroke:#787878;stroke-width:2.07554;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+          <rect
+             transform="rotate(90)"
+             ry="9.1811895"
+             y="-529.08984"
+             x="1417.3182"
+             height="118.93524"
+             width="60.11702"
+             id="rect3166-59-0-7-7-9"
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.28297;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+             x="668.37964"
+             y="1458.788"
+             id="text3757-3-3-3"><tspan
+               sodipodi:role="line"
+               x="668.37964"
+               y="1458.788"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L Bold';text-align:center;text-anchor:middle;fill:#ffffff"
+               id="tspan4751-9-4">Compulsory step</tspan></text>
+          <rect
+             transform="rotate(90)"
+             ry="9.1811895"
+             y="-529.08984"
+             x="1520.1393"
+             height="118.93524"
+             width="60.117016"
+             id="rect3166-59-0-7-7-9-3"
+             style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3.28297;stroke-miterlimit:4;stroke-dasharray:9.84892, 9.84892;stroke-dashoffset:0;stroke-opacity:1" />
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+             x="638.62964"
+             y="1558.1914"
+             id="text3757-3-3-3-0"><tspan
+               sodipodi:role="line"
+               x="638.62964"
+               y="1558.1914"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L Bold';text-align:center;text-anchor:middle;fill:#ffffff"
+               id="tspan4751-9-5-5">Optional step</tspan></text>
+          <text
+             xml:space="preserve"
+             style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+             x="599.47705"
+             y="1362.859"
+             id="text3757-3-3-3-4"><tspan
+               sodipodi:role="line"
+               x="599.47705"
+               y="1362.859"
+               style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L Bold';text-align:center;text-anchor:middle;fill:#ffffff"
+               id="tspan4751-9-9">Legend</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+  <text
+     id="text21423"
+     y="123.21472"
+     x="288.15714"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';letter-spacing:0px;word-spacing:0px;fill:#646464;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';fill:#646464;fill-opacity:1"
+       y="123.21472"
+       x="288.15714"
+       id="tspan21425"
+       sodipodi:role="line">if vcfSuffix1_snvs != vcfSuffix1_indels</tspan></text>
+  <g
+     id="g10888"
+     transform="matrix(0.77154443,0,0,0.77154443,-94.394234,166.39826)">
+    <text
+       id="text5427-4"
+       y="-188.02905"
+       x="510.13165"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L Bold';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+         y="-188.02905"
+         x="510.13165"
+         id="tspan5429-5"
+         sodipodi:role="line">Input folder 1</tspan><tspan
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L Bold';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+         id="tspan5431-2"
+         y="-137.10905"
+         x="510.13165"
+         sodipodi:role="line"> VCF</tspan></text>
+  </g>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot8092"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0.01%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     transform="translate(-123.43642,-229.4619)"><flowRegion
+       id="flowRegion8094"><rect
+         id="rect8096"
+         width="30.890553"
+         height="157.67053"
+         x="581.11096"
+         y="964.56946"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L'" /></flowRegion><flowPara
+       id="flowPara8098"
+       style="font-size:32px;line-height:1.25"> </flowPara></flowRoot>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';letter-spacing:0px;word-spacing:0px;fill:#d4d4d4;fill-opacity:1;stroke:none"
+     x="-471.26382"
+     y="710.14563"
+     id="text23409"
+     transform="rotate(-90)"><tspan
+       sodipodi:role="line"
+       x="-471.26382"
+       y="710.14563"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:45px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';fill:#d4d4d4;fill-opacity:1"
+       id="tspan23407">process indels &amp; MNPs</tspan></text>
+  <text
+     id="text24837"
+     y="123.21472"
+     x="164.95721"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';letter-spacing:0px;word-spacing:0px;fill:#0b0b0b;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';fill:#0b0b0b;fill-opacity:1"
+       y="123.21472"
+       x="164.95721"
+       id="tspan24835"
+       sodipodi:role="line">default</tspan></text>
+  <path
+     style="fill:none;stroke:#646464;stroke-width:8.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:17.6, 8.8;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 870.61124,76.114724 0.4803,204.484186 h 80.24006 l 0.2402,104.45029"
+     id="path26174"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccc" />
+  <path
+     style="fill:none;stroke:#0b0b0b;stroke-width:8.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 640.07545,574.18958 -0.9606,116.93448"
+     id="path26224"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cc" />
+  <g
+     transform="matrix(0.69730555,0,0,0.77957917,30.824243,-685.76524)"
+     id="g26214">
+    <g
+       id="g26212"
+       transform="translate(-713.6,665.6)">
+      <g
+         id="g26210">
+        <rect
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.32829;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+           id="rect26190"
+           width="135.00516"
+           height="425.54666"
+           x="392.05261"
+           y="-2375.2268"
+           ry="20.168512"
+           transform="rotate(90)" />
+        <text
+           id="text26194"
+           y="432.01733"
+           x="2174.2488"
+           style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           xml:space="preserve"><tspan
+             id="tspan26192"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+             y="432.01733"
+             x="2174.2488"
+             sodipodi:role="line">concatsnvsindels</tspan></text>
+        <text
+           id="text26202"
+           y="470.38467"
+           x="2065.7327"
+           style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           xml:space="preserve"><tspan
+             id="tspan26196"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+             y="470.38467"
+             x="2065.7327"
+             sodipodi:role="line">concat</tspan><tspan
+             id="tspan26198"
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Italic';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+             y="510.38467"
+             x="2065.7327"
+             sodipodi:role="line">bcftools concat</tspan><tspan
+             id="tspan26200"
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Bold';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+             y="550.38464"
+             x="2069.0605"
+             sodipodi:role="line"> </tspan></text>
+        <text
+           id="text26208"
+           y="470.38467"
+           x="2274.5334"
+           style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+           xml:space="preserve"><tspan
+             id="tspan26204"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+             y="470.38467"
+             x="2274.5334"
+             sodipodi:role="line">index</tspan><tspan
+             id="tspan26206"
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Source Sans Pro';-inkscape-font-specification:'Source Sans Pro Italic';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+             y="510.38467"
+             x="2274.5334"
+             sodipodi:role="line">bcftools index</tspan></text>
+      </g>
+    </g>
+  </g>
+  <text
+     id="text26222"
+     y="123.21472"
+     x="1056.1577"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';letter-spacing:0px;word-spacing:0px;fill:#0b0b0b;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';fill:#0b0b0b;fill-opacity:1"
+       y="123.21472"
+       x="1056.1577"
+       id="tspan26220"
+       sodipodi:role="line">default</tspan></text>
+  <g
+     id="g26232"
+     transform="matrix(0.77154443,0,0,0.77154443,577.60575,166.39826)">
+    <text
+       id="text26230"
+       y="-188.02905"
+       x="510.13165"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L Bold';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+         y="-188.02905"
+         x="510.13165"
+         id="tspan26226"
+         sodipodi:role="line">Input folder 2</tspan><tspan
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:40px;line-height:1.25;font-family:'Nimbus Roman No9 L';-inkscape-font-specification:'Nimbus Roman No9 L Bold';text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1"
+         id="tspan26228"
+         y="-137.10905"
+         x="510.13165"
+         sodipodi:role="line"> VCF</tspan></text>
+  </g>
+  <path
+     style="fill:none;stroke:#0b0b0b;stroke-width:8.8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+     d="m 409.16727,76.114724 -0.48031,11.267241 439.75982,5.63362 -0.24016,277.633605"
+     id="path26963"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccc" />
+  <g
+     id="g23544"
+     transform="matrix(0.77714259,0,0,0.77714259,-726.88477,2.2622767)">
+    <g
+       id="g26796"
+       transform="translate(39.117658)">
+      <rect
+         transform="rotate(90)"
+         ry="34.300083"
+         y="-2495.8789"
+         x="397.01828"
+         height="626.34808"
+         width="133.30841"
+         id="rect23532"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:10.0753;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         x="2182.2087"
+         y="432.01733"
+         id="text23536"><tspan
+           sodipodi:role="line"
+           x="2182.2087"
+           y="432.01733"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L Bold';text-align:center;text-anchor:middle"
+           id="tspan23534">intersectIndelsMNPs</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         x="2383.1797"
+         y="470.38467"
+         id="text23542"><tspan
+           sodipodi:role="line"
+           x="2383.1797"
+           y="470.38467"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';text-align:center;text-anchor:middle"
+           id="tspan23538">intersect</tspan><tspan
+           sodipodi:role="line"
+           x="2383.1797"
+           y="512.10016"
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';text-align:center;text-anchor:middle"
+           id="tspan26769"> bcftools isec</tspan><tspan
+           sodipodi:role="line"
+           x="2387.6277"
+           y="552.10016"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';text-align:center;text-anchor:middle"
+           id="tspan23540"> </tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         x="2080.5337"
+         y="470.38467"
+         id="text26777"><tspan
+           sodipodi:role="line"
+           x="2080.5337"
+           y="470.38467"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';text-align:center;text-anchor:middle"
+           id="tspan26773">extract</tspan><tspan
+           sodipodi:role="line"
+           x="2084.9817"
+           y="512.10016"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';text-align:center;text-anchor:middle"
+           id="tspan26775"><tspan
+   id="tspan26783"
+   style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';text-align:center;text-anchor:middle">bcftools view -v indels,mnps</tspan> </tspan></text>
+    </g>
+  </g>
+  <g
+     id="g26822"
+     transform="matrix(0.77714259,0,0,0.77714259,-1071.7036,266.30009)">
+    <g
+       id="g26820"
+       transform="translate(39.117658)">
+      <rect
+         transform="rotate(90)"
+         ry="25.151293"
+         y="-2409.6865"
+         x="343.47418"
+         height="459.28354"
+         width="134.71083"
+         id="rect26798"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:8.67288;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         x="2175.6086"
+         y="379.17447"
+         id="text26802"><tspan
+           sodipodi:role="line"
+           x="2175.6086"
+           y="379.17447"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L Bold';text-align:center;text-anchor:middle"
+           id="tspan26800">concatAndIndexVCF</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         x="2294.2271"
+         y="417.54181"
+         id="text26810"><tspan
+           sodipodi:role="line"
+           x="2294.2271"
+           y="417.54181"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';text-align:center;text-anchor:middle"
+           id="tspan26804">index</tspan><tspan
+           sodipodi:role="line"
+           x="2294.2271"
+           y="459.25729"
+           style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';text-align:center;text-anchor:middle"
+           id="tspan26808"> bcftools index</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;-inkscape-font-specification:'Source Sans Pro';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         x="2073.9336"
+         y="417.54181"
+         id="text26818"><tspan
+           sodipodi:role="line"
+           x="2073.9336"
+           y="417.54181"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';text-align:center;text-anchor:middle"
+           id="tspan26816">concat</tspan><tspan
+           sodipodi:role="line"
+           x="2073.9336"
+           y="459.25729"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';text-align:center;text-anchor:middle"
+           id="tspan26826"><tspan
+             style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';text-align:center;text-anchor:middle"
+             id="tspan26828">bcftools concat</tspan></tspan></text>
+    </g>
+  </g>
+  <text
+     id="text26218"
+     y="123.21472"
+     x="692.95538"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';letter-spacing:0px;word-spacing:0px;fill:#646464;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     xml:space="preserve"><tspan
+       style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:20px;line-height:1.25;font-family:'Nimbus Sans L';-inkscape-font-specification:'Nimbus Sans L';fill:#646464;fill-opacity:1"
+       y="123.21472"
+       x="692.95538"
+       id="tspan26216"
+       sodipodi:role="line">if vcfSuffix2_snvs == vcfSuffix2_indels</tspan></text>
+</svg>

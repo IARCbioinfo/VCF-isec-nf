@@ -39,9 +39,9 @@ if (params.help) {
     log.info "Mandatory arguments:"
     log.info "--input_folder1   <DIR>   Folder containing VCF files"
     log.info "--input_folder2   <DIR>   Folder containing other VCF files"
-    log.info "--output_folder      <DIR>   Output folder"
     log.info ""
     log.info "Optional arguments:"
+    log.info "--output_folder      <DIR>   Output folder"
     log.info "--vcfSuffix1_snvs   <STRING>  Suffix (without the extension) of files in"
     log.info "                              input_folder1 containing SNVs"
     log.info "--vcfSuffix1_indels <STRING>  Suffix (without the extension) of files in"
@@ -91,16 +91,16 @@ process concatsnvsindels {
   tuple val(sampleId), path(SNVs), path(SNVstbi), path(indels), path(indelstbi)
 
   output:
-  tuple val(sampleId), path("${sampleId}.mnps_indels.vcf.gz") , path("${sampleId}.mnps_indels.vcf.gz.tbi") 
+  tuple val(sampleId), path("${sampleId}.concat.vcf.gz") , path("${sampleId}.concat.vcf.gz.tbi") 
 
   script:
   """
   # Concatenate SNV and indels/MNPs files
   mkdir sort_tmp
-  bcftools concat $SNVs $indels -a -Ou | bcftools view -v indels,mnps -Ou | bcftools sort -m ${params.mem}G -T sort_tmp/ -Oz -o ${sampleId}.mnps_indels.vcf.gz
+  bcftools concat $SNVs $indels -a -Ou | bcftools sort -m ${params.mem}G -T sort_tmp/ -Oz -o ${sampleId}.concat.vcf.gz
 
   # Index the concatenated VCF file
-  bcftools index -t ${sampleId}.mnps_indels.vcf.gz
+  bcftools index -t ${sampleId}.concat.vcf.gz
   """
 }
 
@@ -133,8 +133,12 @@ process intersectIndelsMNPs {
 
   script:
   """
+  # Extract indels and MNPs
+  bcftools view -v indels,mnps $VCF1File -Oz -o ${sampleId}_1.indels_mnps.vcf.gz
+  bcftools view -v indels,mnps $VCF2File -Oz -o ${sampleId}_2.indels_mnps.vcf.gz
+
   # Intersect VCF1 and VCF2 VCF files for indels and MNPs
-  bcftools isec -Oz -n =2 $VCF1File $VCF2File -p intersect_${sampleId}
+  bcftools isec -Oz -n =2 ${sampleId}_1.indels_mnps.vcf.gz ${sampleId}_2.indels_mnps.vcf.gz -p intersect_${sampleId}
   mv intersect_${sampleId}/0000.vcf.gz indels_mnps_${sampleId}.vcf.gz
   """
 }
