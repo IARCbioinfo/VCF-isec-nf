@@ -37,19 +37,19 @@ if (params.help) {
     log.info "nextflow run pipeline.nf [-with-docker] [OPTIONS]"
     log.info ""
     log.info "Mandatory arguments:"
-    log.info "--vcfFolder1   <DIR>   Folder containing VCF1 VCF files"
-    log.info "--vcfFolder2  <DIR>   Folder containing VCF2 VCF files"
-    log.info "--outputFolder      <DIR>   Output folder"
+    log.info "--input_folder1   <DIR>   Folder containing VCF files"
+    log.info "--input_folder2   <DIR>   Folder containing other VCF files"
+    log.info "--output_folder      <DIR>   Output folder"
     log.info ""
     log.info "Optional arguments:"
     log.info "--vcfSuffix1_snvs   <STRING>  Suffix (without the extension) of files in"
-    log.info "                              vcfFolder1 containing SNVs"
+    log.info "                              input_folder1 containing SNVs"
     log.info "--vcfSuffix1_indels <STRING>  Suffix (without the extension) of files in"
-    log.info "                              vcfFolder1 containing indels and MNVs"
+    log.info "                              input_folder1 containing indels and MNVs"
     log.info "--vcfSuffix2_snvs   <STRING>  Suffix (without the extension) of files in"
-    log.info "                              vcfFolder2 containing SNVs"
+    log.info "                              input_folder2 containing SNVs"
     log.info "--vcfSuffix2_indels <STRING>  Suffix (without the extension) of files in"
-    log.info "                              vcfFolder2 containing indels and MNVs"
+    log.info "                              input_folder2 containing indels and MNVs"
     log.info "--ext               <STRING>  Extension of variant calling files"
 
 // Cluster options
@@ -59,18 +59,18 @@ params.cpu = 2
 } else {
     /* Software information */
     log.info "help:               ${params.help}"
-    log.info "vcfFolder1:    ${params.vcfFolder1}"
-    log.info "vcfFolder2:   ${params.vcfFolder2}"
-    log.info "outputFolder:       ${params.outputFolder}"
+    log.info "input_folder1:    ${params.input_folder1}"
+    log.info "input_folder2:   ${params.input_folder2}"
+    log.info "output_folder:       ${params.output_folder}"
 }
 
 
 // Define the pipeline parameters
-params.vcfFolder1 = '/path/to/VCF1/vcf/files'
-params.vcfFolder2 = '/path/to/VCF2/vcf/files'
+params.input_folder1 = '/path/to/VCF1/vcf/files'
+params.input_folder2 = '/path/to/VCF2/vcf/files'
 
 // Output folder
-params.outputFolder = 'output/'
+params.output_folder = 'output/'
 
 // File suffixes
 params.vcfSuffix1_snvs   = '_filtered_PASS_norm.vcf.hg38_multianno.vcf'
@@ -150,7 +150,7 @@ process concatAndIndexVCF {
   output:
   path("${sampleId}.snvs_plus_shared_indels.vcf.hg38_multianno.vcf.gz*") 
 
-  publishDir "${params.outputFolder}", mode: 'move'
+  publishDir "${params.output_folder}", mode: 'move'
 
   script:
   """
@@ -172,14 +172,14 @@ workflow {
 // Create separate channels for VCF1 and VCF2 files
 // Channel with SNVs
   VCF1Files_snvs = Channel
-  .fromPath("$params.vcfFolder1/*$params.vcfSuffix1_snvs$params.ext")
+  .fromPath("$params.input_folder1/*$params.vcfSuffix1_snvs$params.ext")
   .map { file ->  [file.baseName.replaceAll(params.vcfSuffix1_snvs, ""), file,file+".tbi"]}
   
 if(params.vcfSuffix1_snvs != params.vcfSuffix1_indels ){
   println "Separate SNV and indel files for VCF 1, concatenating"
   // Channel with indels
   VCF1Files_indels = Channel
-  .fromPath("$params.vcfFolder1/*$params.vcfSuffix1_indels$params.ext")
+  .fromPath("$params.input_folder1/*$params.vcfSuffix1_indels$params.ext")
   .map { file ->  [file.baseName.replaceAll(params.vcfSuffix1_indels, ""), file,file+".tbi"]}
   // Channel with both files
   VCF1Files2concat = VCF1Files_snvs.join(VCF1Files_indels)
@@ -192,14 +192,14 @@ if(params.vcfSuffix1_snvs != params.vcfSuffix1_indels ){
 
 // same for second set of VCFs
 VCF2Files_snvs = Channel
-  .fromPath("$params.vcfFolder2/*$params.vcfSuffix2_snvs$params.ext")
+  .fromPath("$params.input_folder2/*$params.vcfSuffix2_snvs$params.ext")
   .map { file ->  [file.baseName.replaceAll(params.vcfSuffix2_snvs, ""), file,file+".tbi"]}
 
 if(params.vcfSuffix2_snvs != params.vcfSuffix2_indels ){
   println "Separate SNV and indel files for VCF 2, concatenating"
   // Channel with indels
   VCF2Files_indels = Channel
-  .fromPath("$params.vcfFolder2/*$params.vcfSuffix2_indels$params.ext")
+  .fromPath("$params.input_folder2/*$params.vcfSuffix2_indels$params.ext")
   .map { file ->  [file.baseName.replaceAll(params.vcfSuffix2_indels, ""), file,file+".tbi"]}
   // Channel with both files
   VCF2Files2concat = VCF2Files_snvs.join(VCF2Files_indels).view()
