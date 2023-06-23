@@ -1,10 +1,8 @@
 # Nextflow VCF Intersection Pipeline
 
-[![CircleCI](https://circleci.com/gh/IARCbioinfo/template-nf.svg?style=svg)](https://circleci.com/gh/IARCbioinfo/template-nf)
-[![Docker Hub](https://img.shields.io/badge/docker-ready-blue.svg)](https://hub.docker.com/r/iarcbioinfo/template-nf/)
-[![DOI](https://zenodo.org/badge/94193130.svg)](https://zenodo.org/badge/latestdoi/94193130)
+[![Docker Hub](https://img.shields.io/badge/docker-ready-blue.svg)](https://hub.docker.com/r/iarcbioinfo/vcf-isec-nf/)
 
-![Workflow representation](template-nf.png)
+![Workflow representation](VCF-isec-nf.png)
 
 ## Description
 This Nextflow pipeline performs the intersection of VCF files using bcftools used in [Mangiante et al. 2023](https://www.nature.com/articles/s41588-023-01321-1). It takes genomic VCF files (for example from Mutect and Strelka), extracts SNVs from the first caller, intersects results from the two callers for indels and multinucleotide polymorphisms (MNPs), and creates a concatenated, indexed VCF file containing SNPs from variant caller 1 and intersected indels/MNPs.
