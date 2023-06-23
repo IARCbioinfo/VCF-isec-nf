@@ -42,9 +42,19 @@ if (params.help) {
     log.info "--outputFolder      <DIR>   Output folder"
     log.info ""
     log.info "Optional arguments:"
-    log.info ""
-    log.info "Flags:"
-    log.info ""
+    log.info "--vcfSuffix1_snvs   <STRING>  Suffix (without the extension) of files in"
+    log.info "                              vcfFolder1 containing SNVs"
+    log.info "--vcfSuffix1_indels <STRING>  Suffix (without the extension) of files in"
+    log.info "                              vcfFolder1 containing indels and MNVs"
+    log.info "--vcfSuffix2_snvs   <STRING>  Suffix (without the extension) of files in"
+    log.info "                              vcfFolder2 containing SNVs"
+    log.info "--vcfSuffix2_indels <STRING>  Suffix (without the extension) of files in"
+    log.info "                              vcfFolder2 containing indels and MNVs"
+    log.info "--ext               <STRING>  Extension of variant calling files"
+
+// Cluster options
+params.mem = 8
+params.cpu = 2
     exit 0
 } else {
     /* Software information */
@@ -63,27 +73,41 @@ params.vcfFolder2 = '/path/to/VCF2/vcf/files'
 params.outputFolder = 'output/'
 
 // File suffixes
-params.vcfSuffix1 = '_filtered_PASS_norm.vcf.hg38_multianno.vcf'
-params.vcfSuffix2 = '.somatic.indels_norm.vcf.hg38_multianno.vcf'
+params.vcfSuffix1_snvs   = '_filtered_PASS_norm.vcf.hg38_multianno.vcf'
+params.vcfSuffix1_indels = '_filtered_PASS_norm.vcf.hg38_multianno.vcf'
+params.vcfSuffix2_snvs   = '.somatic.snvs_norm.vcf'
+params.vcfSuffix2_indels = '.somatic.indels_norm.vcf'
 params.ext = '.gz'
 
+// Cluster options
 params.mem = 8
+params.cpu = 2
 
-    // Separate channels for VCF1 and VCF2 files
-VCF1Files = Channel
-  .fromPath("$params.vcfFolder1/*$params.vcfSuffix1$params.ext")
-  .map { file ->  [file.baseName.replaceAll(params.vcfSuffix1, ""), file,file+".tbi"]}
+process concatsnvsindels {
+  memory params.mem+'GB'
+  cpus params.cpu
 
-VCF2Files = Channel
-  .fromPath("$params.vcfFolder2/*$params.vcfSuffix2$params.ext")
-  .map { file ->  [file.baseName.replaceAll(params.vcfSuffix2, ""), file,file+".tbi"]}
+  input:
+  tuple val(sampleId), path(SNVs), path(SNVstbi), path(indels), path(indelstbi)
 
+  output:
+  tuple val(sampleId), path("${sampleId}.mnps_indels.vcf.gz") , path("${sampleId}.mnps_indels.vcf.gz.tbi") 
 
-  // Join VCF1 and VCF2 channels using sample ID as key
-intersectChannel = VCF1Files
-  .join(VCF2Files).view()
+  script:
+  """
+  # Concatenate SNV and indels/MNPs files
+  mkdir sort_tmp
+  bcftools concat $SNVs $indels -a -Ou | bcftools view -v indels,mnps -Ou | bcftools sort -m ${params.mem}G -T sort_tmp/ -Oz -o ${sampleId}.mnps_indels.vcf.gz
+
+  # Index the concatenated VCF file
+  bcftools index -t ${sampleId}.mnps_indels.vcf.gz
+  """
+}
 
 process extractSNVs {
+  memory params.mem+'GB'
+  cpus params.cpu
+
   input:
   tuple val(sampleId), path(VCF1File), path(VCF1Filetbi), path(VCF2File), path(VCF2Filetbi)
 
@@ -98,6 +122,9 @@ process extractSNVs {
 }
 
 process intersectIndelsMNPs {
+  memory params.mem+'GB'
+  cpus params.cpu
+
   input:
   tuple val(sampleId), path(VCF1File), path(VCF1Filetbi), path(VCF2File), path(VCF2Filetbi)
 
@@ -115,6 +142,7 @@ process intersectIndelsMNPs {
 
 process concatAndIndexVCF {
   memory params.mem+'GB'
+  cpus params.cpu
 
   input:
   tuple val(sampleId), path(SNVs), path(indels_MNPs) 
@@ -140,6 +168,52 @@ process concatAndIndexVCF {
 }
 
 workflow {
+
+// Create separate channels for VCF1 and VCF2 files
+// Channel with SNVs
+  VCF1Files_snvs = Channel
+  .fromPath("$params.vcfFolder1/*$params.vcfSuffix1_snvs$params.ext")
+  .map { file ->  [file.baseName.replaceAll(params.vcfSuffix1_snvs, ""), file,file+".tbi"]}
+  
+if(params.vcfSuffix1_snvs != params.vcfSuffix1_indels ){
+  println "Separate SNV and indel files for VCF 1, concatenating"
+  // Channel with indels
+  VCF1Files_indels = Channel
+  .fromPath("$params.vcfFolder1/*$params.vcfSuffix1_indels$params.ext")
+  .map { file ->  [file.baseName.replaceAll(params.vcfSuffix1_indels, ""), file,file+".tbi"]}
+  // Channel with both files
+  VCF1Files2concat = VCF1Files_snvs.join(VCF1Files_indels)
+  // Channel with concatenated files
+  VCF1Files = concatsnvsindels(VCF1Files2concat)
+}else{
+  VCF1Files = VCF1Files_snvs
+}
+//VCF1Files = VCF1Files.view()
+
+// same for second set of VCFs
+VCF2Files_snvs = Channel
+  .fromPath("$params.vcfFolder2/*$params.vcfSuffix2_snvs$params.ext")
+  .map { file ->  [file.baseName.replaceAll(params.vcfSuffix2_snvs, ""), file,file+".tbi"]}
+
+if(params.vcfSuffix2_snvs != params.vcfSuffix2_indels ){
+  println "Separate SNV and indel files for VCF 2, concatenating"
+  // Channel with indels
+  VCF2Files_indels = Channel
+  .fromPath("$params.vcfFolder2/*$params.vcfSuffix2_indels$params.ext")
+  .map { file ->  [file.baseName.replaceAll(params.vcfSuffix2_indels, ""), file,file+".tbi"]}
+  // Channel with both files
+  VCF2Files2concat = VCF2Files_snvs.join(VCF2Files_indels).view()
+  // Channel with concatenated files
+  VCF2Files = concatsnvsindels(VCF2Files2concat)
+}else{
+  VCF2Files = VCF2Files_snvs
+}
+VCF2Files = VCF2Files
+
+  // Join VCF1 and VCF2 channels using sample ID as key
+intersectChannel = VCF1Files
+  .join(VCF2Files).view()
+
   // Run the processes in parallel
   extractSNVs(intersectChannel)
   intersectIndelsMNPs(intersectChannel)
